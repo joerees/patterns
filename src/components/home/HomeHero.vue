@@ -12,7 +12,7 @@
           our mannerisms, our handwriting is unique to us.
         </p>
 
-        <a href="#" class="button mt-8">
+        <RouterLink to="/tool" class="button mt-8">
           Get started
           <svg
             class="w-5 h-5 ml-2 mr-1"
@@ -26,7 +26,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-        </a>
+        </RouterLink>
       </div>
       <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
         <img alt="logo" class="logo p-4" src="@/assets/sans-pd.png" width="100%" height="auto" />

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import '@/assets/styles/main.css'
 import { onMounted, ref } from 'vue'
-import type { Schema } from '../../amplify/data/resource'
+import type { Schema } from '../../../amplify/data/resource'
 import { generateClient } from 'aws-amplify/data'
 
 const client = generateClient<Schema>()
@@ -41,12 +41,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <main>
+  <section>
     <h1>My todos</h1>
     <button @click="createTodo">+ new</button>
     <ul>
       <li v-for="todo in todos" :key="todo.id">
-        {{ todo.content }} {{ todo }} <button @click="deleteTodo(todo.id)">- Delete</button>
+        {{ todo.content }} <button @click="deleteTodo(todo.id)">- Delete</button>
       </li>
     </ul>
     <div>
@@ -56,5 +56,5 @@ onMounted(() => {
         Review next steps of this tutorial.
       </a>
     </div>
-  </main>
+  </section>
 </template>

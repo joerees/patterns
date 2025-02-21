@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import Todos from './components/Todos.vue'
 
 import SiteFooter from './components/SiteFooter.vue'
 import SiteHeader from './components/SiteHeader.vue'
@@ -16,7 +15,6 @@ import SiteHeader from './components/SiteHeader.vue'
       </transition>
     </router-view>
   </div>
-  <Todos />
 
   <SiteFooter />
 </template>

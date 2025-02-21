@@ -11,6 +11,8 @@
   --color-blue-light: #39c9ff;
   --color-blue-dark: #00aff0;
   --color-bermuda: #78dcca;
+  --color-red: #ff0000;
+  --color-red-dark: #bd2222;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

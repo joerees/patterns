@@ -44,9 +44,6 @@ export default {
     }
     `,
         ],
-
-        // array with CSS urls
-        injectStylesUrls: ['path/to/one.css', 'path/to/two.css'],
       }
 
       if (swiperEl) {
