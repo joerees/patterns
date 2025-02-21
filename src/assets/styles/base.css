@@ -62,7 +62,7 @@
   --color-text: var(--vt-c-text-dark-2);
   --colour-toggle-text: var(--vt-c-black-soft);
 
-  --logo-filter: invert(1) grayscale(1);
+  --logo-filter: invert(1) grayscale(1) brightness(10);
 }
 :root.dark-2 {
   --color-background: var(--vt-c-black);
