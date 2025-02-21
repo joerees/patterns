@@ -1,0 +1,149 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-navy: #000045;
+  --vt-c-navy-soft: #000033;
+  --vt-c-navy-mute: #000066;
+
+  --vt-c-blue: #00aff0;
+  --vt-c-blue-soft: #13b5f1;
+  --vt-c-blue-mute: #58cdf8;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --element-size: 60px;
+
+  --accent-color: #cacaca;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+
+  --colour-toggle-text: var(--vt-c-white-soft);
+
+  --logo-filter: invert(0);
+}
+:root.dark {
+  --color-background: var(--vt-c-navy);
+  --color-background-soft: var(--vt-c-navy-soft);
+  --color-background-mute: var(--vt-c-navy-mute);
+
+  --color-border: var(--vt-c-divider-dark-2);
+  --color-border-hover: var(--vt-c-divider-dark-1);
+
+  --color-heading: var(--vt-c-text-dark-1);
+  --color-text: var(--vt-c-text-dark-2);
+  --colour-toggle-text: var(--vt-c-black-soft);
+
+  --logo-filter: invert(1) grayscale(1);
+}
+:root.dark-2 {
+  --color-background: var(--vt-c-black);
+  --color-background-soft: var(--vt-c-black-soft);
+  --color-background-mute: var(--vt-c-black-mute);
+
+  --color-border: var(--vt-c-divider-dark-2);
+  --color-border-hover: var(--vt-c-divider-dark-1);
+
+  --color-heading: var(--vt-c-text-dark-1);
+  --color-text: var(--vt-c-text-dark-2);
+  --colour-toggle-text: var(--vt-c-black-soft);
+
+  --logo-filter: invert(1);
+}
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}*/
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-white);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  /* font-family: 'Helvetica Neue', sans-serif; */
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.dark body {
+  background: var(--color-navy);
+}
+:root {
+  --button-gradient:
+    radial-gradient(at 73% 60%, hsla(86, 71%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 87% 99%, hsla(298, 95%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 26% 86%, hsla(354, 94%, 63%, 1) 0px, transparent 50%),
+    radial-gradient(at 41% 11%, hsla(274, 60%, 65%, 1) 0px, transparent 50%),
+    radial-gradient(at 23% 59%, hsla(156, 70%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 86% 36%, hsla(299, 61%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 32% 96%, hsla(18, 74%, 62%, 1) 0px, transparent 50%);
+}
+
+button,
+.button {
+  display: inline-flex;
+  background: var(--color-blue);
+  color: var(--color-white);
+  border-radius: 0.5rem;
+  padding: theme('spacing.2') theme('spacing.4');
+  align-items: center;
+  border: 2px solid transparent;
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+.button:focus {
+  border: 2px solid var(--color-blue);
+}

@@ -1,0 +1,75 @@
+@import './transitions.css';
+@import './base.css';
+@import 'tailwindcss';
+
+@theme {
+  --color-*: initial;
+  --color-white: #fff;
+  --color-navy: #000033;
+  --color-midnight: #121063;
+  --color-blue: #00aff0;
+  --color-blue-light: #39c9ff;
+  --color-blue-dark: #00aff0;
+  --color-bermuda: #78dcca;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  h1 {
+    @apply max-w-2xl mb-8 inline-block text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white;
+  }
+  h2 {
+    @apply max-w-xl mb-8 inline-block text-2xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white;
+  }
+  section.page_section {
+    @apply bg-white dark:bg-navy;
+  }
+  section.page_section:not(:first-child) {
+    @apply mt-16 border-t border-blue pt-16;
+  }
+
+  .page_section__content {
+    @apply mx-auto max-w-7xl px-4;
+  }
+}
+
+@layer components {
+  .card {
+    background-color: var(--color-white);
+    border-radius: var(--rounded-lg);
+    padding: var(--spacing-6);
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+#app {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0rem;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+section {
+  margin: 2rem 0 6rem;
+}
+
+.logo {
+  filter: var(--logo-filter);
+}
+a,
+.green {
+  text-decoration: none;
+  color: var(--color-blue);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: var(--color-blue-light);
+  }
+}
