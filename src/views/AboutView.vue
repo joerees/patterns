@@ -23,5 +23,8 @@
     </section>
   </div>
 </template>
+<script setup lang="ts">
+import ToolingIcon from '@/components/icons/IconTooling.vue'
+</script>
 
 <style></style>
